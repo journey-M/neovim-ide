@@ -3,8 +3,8 @@ if not status_ok then
   return
 end
 
-require "user.lsp.lsp-installer"
-require "user.lsp.null-ls"
+require "lsp.lsp-installer"
+require "lsp.null-ls"
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
