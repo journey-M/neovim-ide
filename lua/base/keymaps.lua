@@ -47,16 +47,16 @@ keymap('n', '<C-Right>', ':vertical resize +2<CR>' )
 
 -- Visual --
 -- Stay in indent mode
-keymap('v', '<', '<gv', v_)
-keymap('v', '>', '>gv', v_)
+keymap('v', '<', '<gv')
+keymap('v', '>', '>gv')
 
 -- Move text up and down
 keymap('n', '<A-]>', '<Esc>:m .+1<CR>' )
 keymap('n', '<A-[>', '<Esc>:m .-2<CR>' )
 
 -- Move text up and down
-keymap('v', '<A-]>', ':m .+1<CR>', v_)
-keymap('v', '<A-[>', ':m .-2<CR>', v_)
+keymap('v', '<A-]>', ':m .+1<CR>')
+keymap('v', '<A-[>', ':m .-2<CR>')
 
 
 -- Visual Block --
@@ -76,7 +76,6 @@ keymap('x', '<A-[>', ":move '<-2<CR>gv-gv" )
 
 
 -- Search telescope --
-
 keymap('n', '<leader>ff', '<Esc>:Telescope find_files<CR>' )
 keymap('n', '<leader>fg', ':Telescope live_grep <cr>' )
 keymap('n', '<leader>fb', ':Telescope buffers <cr>' )
