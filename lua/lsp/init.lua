@@ -4,7 +4,6 @@ if not status_ok then
 end
 
 require "lsp.lsp-installer"
-require "lsp.null-ls"
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

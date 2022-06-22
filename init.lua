@@ -7,7 +7,6 @@ require "base.bufferline"
 -- ui
 require "ui.alpha"
 require "ui.colorscheme"
-require "ui.lualine"
 require "ui.nvim-tree"
 require "ui.whichkey"
 

@@ -1,74 +1,84 @@
-local opts = { noremap = true, silent = true }
-
-local term_opts = { silent = true }
+-- Modes
+--   normal_mode = 'n',
+--   insert_mode = 'i',
+--   visual_mode = 'v',
+--   visual_block_mode = 'x',
+--   term_mode = 't',
+--   command_mode = 'c',
 
 -- Shorten function name
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 
 --Remap space as leader key
-keymap("", ";", "<Nop>", opts)
-vim.g.mapleader = ";"
-vim.g.maplocalleader = ";"
+vim.g.mapleader = ';'
 
 -- edit mode
-keymap("i", "jk", "<ESC>", opts)
-keymap("n", "<leader>w", ":w<cr>", opts)
-keymap("n", "<leader>q", ":q<cr>", opts)
-keymap("i", "<leader>w", ":w<cr>", opts)
-keymap("i", "<leader>q", ":q<cr>", opts)
--- Modes
+keymap('i', 'jk', '<ESC>')
 
---   normal_mode = "n",
---   insert_mode = "i",
---   visual_mode = "v",
---   visual_block_mode = "x",
---   term_mode = "t",
---   command_mode = "c",
+keymap('n', '<leader>w', ':w<cr>' )
+keymap('n', '<leader>W', ':wa<cr>' )
+keymap('n', '<leader>q', ':q<cr>' )
+keymap('n', '<leader>Q', ':qa<cr>' )
+keymap('i', '<leader>w', '<ESC>:w<cr>' )
+keymap('i', '<leader>W', '<ESC>:wa<cr>' )
+keymap('i', '<leader>q', '<ESC>:q<cr>' )
+keymap('i', '<leader>Q', '<ESC>:qa<cr>' )
+
+-- Navigate buffers
+keymap('n', '<A-k>', ':bn<CR>' , {noremap = true,silent = true})
+keymap('n', '<A-j>', ':bp<CR>' ,  {noremap = true,silent = true})
+keymap('n', '<A-s>', ':BufferLinePick <CR>' ,  {noremap = true,silent = true})
+keymap('n', '<A-d>', ':Bdelete <CR>' ,  {noremap = true,silent = true})
+
 
 -- Normal --
 -- Better window navigation
--- keymap("n", "<C-h>", "<C-w>h", opts)
--- keymap("n", "<C-j>", "<C-w>j", opts)
--- keymap("n", "<C-l>", "<C-w>l", opts)
--- keymap("n", "<C-k>", "<C-w>k", opts)
+keymap('n', '<C-h>', '<C-w>h' )
+keymap('n', '<C-j>', '<C-w>j' )
+keymap('n', '<C-l>', '<C-w>l' )
+keymap('n', '<C-k>', '<C-w>k' )
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
-
--- Navigate buffers
-keymap('n', '<leader>bp', ':bp<cr>' , opts)
-keymap('n', '<leader>bn', ':bn<cr>', opts)
-keymap('n', '<leader>bd', ':Bdelete<cr>', opts)
-
--- Move text up and down
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+keymap('n', '<C-Up>', ':resize -2<CR>' )
+keymap('n', '<C-Down>', ':resize +2<CR>' )
+keymap('n', '<C-Left>', ':vertical resize -2<CR>' )
+keymap('n', '<C-Right>', ':vertical resize +2<CR>' )
 
 
 -- Visual --
 -- Stay in indent mode
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
+keymap('v', '<', '<gv', v_)
+keymap('v', '>', '>gv', v_)
 
 -- Move text up and down
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+keymap('n', '<A-]>', '<Esc>:m .+1<CR>' )
+keymap('n', '<A-[>', '<Esc>:m .-2<CR>' )
+
+-- Move text up and down
+keymap('v', '<A-]>', ':m .+1<CR>', v_)
+keymap('v', '<A-[>', ':m .-2<CR>', v_)
 
 
 -- Visual Block --
 -- Move text up and down
--- keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
--- keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
--- keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
--- keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+-- keymap('x', 'J', ':move '>+1<CR>gv-gv' )
+-- keymap('x', 'K', ':move '<-2<CR>gv-gv' )
+keymap('x', '<A-]>', ":move '>+1<CR>gv-gv" )
+keymap('x', '<A-[>', ":move '<-2<CR>gv-gv" )
 
 -- Terminal --
 -- Better terminal navigation
--- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
--- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
--- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
--- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+-- keymap('t', '<C-h>', '<C-\\><C-N><C-w>h', term_)
+-- keymap('t', '<C-j>', '<C-\\><C-N><C-w>j', term_)
+-- keymap('t', '<C-k>', '<C-\\><C-N><C-w>k', term_)
+-- keymap('t', '<C-l>', '<C-\\><C-N><C-w>l', term_)
+
+
+
+-- Search telescope --
+
+keymap('n', '<leader>ff', '<Esc>:Telescope find_files<CR>' )
+keymap('n', '<leader>fg', ':Telescope live_grep <cr>' )
+keymap('n', '<leader>fb', ':Telescope buffers <cr>' )
+keymap('n', '<leader>fh', ':Telescope help_tags <cr>' )
 
