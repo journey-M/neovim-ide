@@ -81,3 +81,5 @@ keymap('n', '<leader>fg', ':Telescope live_grep <cr>' )
 keymap('n', '<leader>fb', ':Telescope buffers <cr>' )
 keymap('n', '<leader>fh', ':Telescope help_tags <cr>' )
 
+
+keymap('n', '<leader>h', '<Esc>:!clang-format -i % <cr>' )
