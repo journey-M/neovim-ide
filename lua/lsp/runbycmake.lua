@@ -3,7 +3,7 @@ runbycmake ={}
 
 function runbycmake.run()
   print("那么开始run ba ")
-  let buf=vim.api.nvim_create_buf(v:false, v:true)
+--  let buf=vim.api.nvim_create_buf(v:false, v:true)
 --call vim.api.nvim_buf_set_lines(buf, 0, -1, v:true, ["test", "text"])
 --let opts = {'relative': 'cursor', 'width': 10, 'height': 2, 'col': 0,
 --     'row': 1, 'anchor': 'NW', 'style': 'minimal'}
