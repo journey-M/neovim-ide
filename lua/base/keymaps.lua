@@ -25,8 +25,8 @@ keymap('i', '<leader>q', '<ESC>:q<cr>' )
 keymap('i', '<leader>Q', '<ESC>:qa<cr>' )
 
 -- Navigate buffers
-keymap('n', '<A-k>', ':bn<CR>' , {noremap = true,silent = true})
-keymap('n', '<A-j>', ':bp<CR>' ,  {noremap = true,silent = true})
+keymap('n', '<A-h>', ':bn<CR>' , {noremap = true,silent = true})
+keymap('n', '<A-l>', ':bp<CR>' ,  {noremap = true,silent = true})
 keymap('n', '<A-s>', ':BufferLinePick <CR>' ,  {noremap = true,silent = true})
 keymap('n', '<A-d>', ':Bdelete <CR>' ,  {noremap = true,silent = true})
 
