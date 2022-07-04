@@ -1,0 +1,12 @@
+---
+name: cpp
+project_root: "/home/guoweiji"
+windows:
+- editor:
+    layout: b25d,80x24,0,0,0
+    panes:
+    - voltron view cmd bt 
+    - voltron view stack 
+    - voltron view breakpoints 
+    - voltron view cmd 'frame variable' 
+
