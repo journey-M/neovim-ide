@@ -83,4 +83,7 @@ keymap('n', '<leader>fh', ':Telescope help_tags <cr>' )
 
 -- use clang-format format code --
 keymap('n', '<leader>ff', '<Esc>:!clang-format -i % <cr>' )
-keymap('n', '<leader>r', '<Esc>:!./run.sh <cr>' )
+keymap('n', '<leader>rr', '<Esc>:!./run.sh <cr>' )
+keymap('n', '<leader>rc', '<Esc>:terminal <cr>' )
+keymap('n', '<leader>rd', '<Esc>:!./run.sh -d<cr>' )
+
