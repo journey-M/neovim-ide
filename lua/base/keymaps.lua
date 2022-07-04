@@ -76,10 +76,11 @@ keymap('x', '<A-[>', ":move '<-2<CR>gv-gv" )
 
 
 -- Search telescope --
-keymap('n', '<leader>ff', '<Esc>:Telescope find_files<CR>' )
+keymap('n', '<leader>fs', '<Esc>:Telescope find_files<CR>' )
 keymap('n', '<leader>fg', ':Telescope live_grep <cr>' )
 keymap('n', '<leader>fb', ':Telescope buffers <cr>' )
 keymap('n', '<leader>fh', ':Telescope help_tags <cr>' )
 
-
-keymap('n', '<leader>h', '<Esc>:!clang-format -i % <cr>' )
+-- use clang-format format code --
+keymap('n', '<leader>ff', '<Esc>:!clang-format -i % <cr>' )
+keymap('n', '<leader>r', '<Esc>:!./run.sh <cr>' )
