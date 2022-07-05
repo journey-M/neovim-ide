@@ -1,12 +1,17 @@
----
-name: cpp
-project_root: "/home/guoweiji"
+session_name: cppdebug
 windows:
-- editor:
-    layout: b25d,80x24,0,0,0
-    panes:
-    - voltron view cmd bt 
-    - voltron view stack 
-    - voltron view breakpoints 
-    - voltron view cmd 'frame variable' 
+- window_name: dev window
+  layout: tiled
+  shell_command_before:
+    - cd ~/                    # run as a first command in all panes
+  panes:
+    - shell_command:           # pane no. 1
+        - voltron view cmd bt 
+        - echo second pane         # pane no. 2
+    - shell_command:           # pane no. 1
+        - voltron view stack 
+    - shell_command:           # pane no. 1
+        - voltron view breakpoints 
+    - shell_command:           # pane no. 1
+        - voltron view cmd 'frame variable'
 
