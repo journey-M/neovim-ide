@@ -11,6 +11,9 @@ set -gx PATH $PATH /opt/flutter/bin/
 set -gx PATH $PATH ~/.local/share/gem/ruby/3.0.0/bin
 alias gst "git status"
 alias gbr "git branch"
-alias gco "git checkout"
+alias gck "git checkout"
+alias gpo "git push origin"
+alias gcm "git commit -m"
+alias gad "git add ."
 abbr  n nvim
 abbr  c cd

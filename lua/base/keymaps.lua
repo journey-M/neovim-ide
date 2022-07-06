@@ -23,6 +23,7 @@ keymap('i', '<leader>w', '<ESC>:w<cr>' )
 keymap('i', '<leader>W', '<ESC>:wa<cr>' )
 keymap('i', '<leader>q', '<ESC>:q<cr>' )
 keymap('i', '<leader>Q', '<ESC>:qa<cr>' )
+keymap('i', '<leader>WQ', '<ESC>:wqa<cr>' )
 
 -- Navigate buffers
 keymap('n', '<A-h>', ':bn<CR>' , {noremap = true,silent = true})
