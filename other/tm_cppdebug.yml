@@ -1,17 +1,16 @@
-session_name: cppdebug
-windows:
-- window_name: dev window
-  layout: ac45,190x45,0,0[190x22,0,0{94x22,0,0,8,95x22,95,190x22,0,23{94x22,0,23,10,95x22,95,23,11}]
-  shell_command_before:
-    - cd ~/                    # run as a first command in all panes
-  panes:
-    - shell_command:           # pane no. 1
-        - voltron view cmd bt 
-        - echo second pane         # pane no. 2
-    - shell_command:           # pane no. 1
-        - voltron view stack 
-    - shell_command:           # pane no. 1
-        - voltron view breakpoints 
-    - shell_command:           # pane no. 1
-        - voltron view cmd 'frame variable'
+name: cppdebug 
+root: ~/
 
+windows:
+  - editor:
+      layout: main-vertical
+      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
+      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
+      # synchronize: after
+      panes:
+        - voltron view cmd bt 
+        - voltron view stack 
+        - voltron view cmd 'frame variable'
+        - guard
+  - server: bundle exec rails s
+  - logs: tail -f log/development.log  

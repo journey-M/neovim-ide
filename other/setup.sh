@@ -5,12 +5,12 @@ mkdir -p ~/.config/fish/
 ln -s ~/.config/nvim/other/config.fish ~/.config/fish/
 
 
-#config for tmuxp
-if [ -f ~/.config/tmuxp/tm_cppdebug.yml ]; then
-  rm ~/.config/tmuxp/tm_cppdebug.yml -f
+#config for tmuxinator
+if [ -f ~/.config/tmuxinator/tm_cppdebug.yml ]; then
+  rm ~/.config/tmuxinator/tm_cppdebug.yml -f
 fi
-mkdir -p ~/.config/tmuxp/
-ln -s ~/.config/nvim/other/tm_cppdebug.yml ~/.config/tmuxp/
+mkdir -p ~/.config/tmuxinator/
+ln -s ~/.config/nvim/other/tm_cppdebug.yml ~/.config/tmuxinator/
 
 
 #config for alacritty
