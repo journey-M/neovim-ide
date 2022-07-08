@@ -22,3 +22,4 @@ if [ -f ~/.config/alacritty/alacritty_debug.yml ]; then
 fi
 mkdir -p ~/.config/alacritty/
 ln -s ~/.config/nvim/other/alacritty_debug.yml ~/.config/alacritty/
+ln -s ~/.config/nvim/other/alacritty.yml ~/.config/alacritty/
