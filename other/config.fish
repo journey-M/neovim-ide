@@ -17,3 +17,4 @@ alias gcm "git commit -m"
 alias gad "git add ."
 abbr  n nvim
 abbr  c cd
+abbr  ffplay_small ffplay -x 380 -y 300

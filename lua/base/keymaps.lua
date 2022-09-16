@@ -81,10 +81,20 @@ keymap('n', '<leader>fs', '<Esc>:Telescope find_files<CR>' )
 keymap('n', '<leader>fg', ':Telescope live_grep <cr>' )
 keymap('n', '<leader>fb', ':Telescope buffers <cr>' )
 keymap('n', '<leader>fh', ':Telescope help_tags <cr>' )
+keymap('n', '<leader>fr', ':Telescope oldfiles <cr>' )
 
 -- use clang-format format code --
 keymap('n', '<leader>ff', '<Esc>:!clang-format -i % <cr>' )
+
+-- run config --
 keymap('n', '<leader>rr', '<Esc>:!./run.sh <cr>' )
 keymap('n', '<leader>rc', '<Esc>:terminal <cr>' )
 keymap('n', '<leader>rd', '<Esc>:!./run.sh -d<cr>' )
+
+
+-- nvim-tree-
+keymap('n', '<leader>e', '<Esc>:NvimTreeToggle <cr>' )
+
+-- easymotion -- 
+keymap('n', 'ss', '<Plug>(easymotion-s2)' )
 

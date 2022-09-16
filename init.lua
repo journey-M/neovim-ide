@@ -22,6 +22,7 @@ require "editor.project"
 require "editor.impatient"
 require "editor.indentline"
 require "editor.autocommands"
+require "editor.easymotion"
 
 -- lsp
 require "lsp"
