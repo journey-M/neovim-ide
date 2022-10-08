@@ -60,6 +60,8 @@ lspconfig.clangd.setup{
           'configure.ac',
           '.git'
         ),
+}
 
+lspconfig.cmake.setup{
 
 }
