@@ -3,8 +3,9 @@ if not status_ok then
   return
 end
 
-require "lsp.lsp-installer"
+--[[ require "lsp.lsp-installer" ]]
 require "lsp.runbycmake"
+require "lsp.lsp-installer"
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
