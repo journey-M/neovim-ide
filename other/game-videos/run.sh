@@ -1,24 +1,24 @@
 #!/bin/bash
-# cat  script_urls.txt | while read line
-# do
-#    echo $line
-#    ./yt-dlp --write-thumbnail --format mp4  $line
-# done
-#
-#
-# rename mp4 file
-# ls *.mp4 | while read -r __f; do
-#   echo $__f
-#   _fres=${__f// /}
-#   _fres=${_fres//\'/}
-#   _fres=${_fres//\[/}
-#   _fres=${_fres//\]/}
-#   _fres=${_fres//!/}
-#   _fres=${_fres//-/}
-#   mv "$__f" "$_fres"
-#   echo $__f
-#   echo $_fres
-# done
+cat  script_urls.txt | while read line
+do
+   echo $line
+   ./yt-dlp --write-thumbnail --format mp4  $line
+done
+
+
+rename mp4 file
+ls *.mp4 | while read -r __f; do
+  echo $__f
+  _fres=${__f// /}
+  _fres=${_fres//\'/}
+  _fres=${_fres//\[/}
+  _fres=${_fres//\]/}
+  _fres=${_fres//!/}
+  _fres=${_fres//-/}
+  mv "$__f" "$_fres"
+  echo $__f
+  echo $_fres
+done
 
 
 
@@ -58,11 +58,11 @@ do
   nohup ffmpeg -i $__f -to $hour:$min:$second.21 -y -c copy "cut$__f";
   #生成mts文件
   ffmpeg -i cut$__f -q 0 cut$__f.mts
-  ffmpeg -i concat:"head.mts|cut$__f.mts" -c copy res_$__f
+  ffmpeg -i concat:"head.mts|cut$__f.mts"  -b:v 3000k  res_$__f
   
-  rm cut$__f
-  rm cut$__f.mts
-  rm nohup.out
+  # rm cut$__f
+  # rm cut$__f.mts
+  # rm nohup.out
 
 done
 
