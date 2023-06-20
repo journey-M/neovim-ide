@@ -41,3 +41,7 @@ luac.out
 
 
 plugin/packer_compiled.lua
+other/game-videos/ffmpeg
+other/game-videos/ffplay
+other/game-videos/ffprobe
+other/game-videos/script_urls.txt

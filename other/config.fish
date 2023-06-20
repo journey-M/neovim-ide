@@ -9,6 +9,7 @@ set -gx PATH ~/.cargo/bin $PATH
 set -gx PATH $PATH ~/.cmds
 set -gx PATH $PATH /opt/flutter/bin/
 set -gx PATH $PATH ~/.local/share/gem/ruby/3.0.0/bin
+set -gx PATH $PATH /home/gwj/Android/Sdk/build-tools/32.0.0
 alias gst "git status"
 alias gbr "git branch"
 alias gck "git checkout"
