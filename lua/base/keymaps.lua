@@ -79,12 +79,18 @@ keymap('x', '<A-[>', ":move '<-2<CR>gv-gv" )
 -- Search telescope --
 keymap('n', '<leader>fs', '<Esc>:Telescope find_files<CR>' )
 keymap('n', '<leader>fg', ':Telescope live_grep <cr>' )
-keymap('n', '<leader>fb', ':Telescope buffers <cr>' )
-keymap('n', '<leader>fh', ':Telescope help_tags <cr>' )
+keymap('n', '<leader>fb', ':Telescope git_branchs<cr>' )
+keymap('n', '<leader>fc', ':Telescope git_commits<cr>' )
+keymap('n', '<leader>ft', ':Telescope tags<cr>' )
 keymap('n', '<leader>fr', ':Telescope oldfiles <cr>' )
+keymap('n', '<leader>gg', ':Telescope grep_string <cr>' )
 
 -- use clang-format format code --
 keymap('n', '<C-A-f>', '<Esc>:!clang-format -i % <cr>' )
+
+-- 查找当前光标下的单词；
+--keymap('n', '<C-A-c>', '<Esc>:cs find c <C-R>=expand("<cword>")<cr><cr>' )
+
 
 -- run config --
 keymap('n', '<leader>rr', '<Esc>:!./run.sh <cr>' )
@@ -97,3 +103,5 @@ keymap('n', '<leader>e', '<Esc>:NvimTreeToggle <cr>' )
 
 -- easymotion -- 
 keymap('n', 'ss', '<Plug>(easymotion-s2)' )
+-- terminal -- 
+keymap('n', '<leader>t', ':ToggleTerm <cr>' )
