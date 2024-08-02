@@ -8,7 +8,18 @@ end
 
 --[[ require "lsp.lsp-installer" ]]
 require "lsp.runbycmake"
-require "lsp.mason"
+require("mason").setup({
+    ui = {
+        icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗"
+        }
+    }
+
+})
+
+require("mason-lspconfig").setup()
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
