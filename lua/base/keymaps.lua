@@ -8,7 +8,7 @@
 
 -- Shorten function name
 local keymap = vim.keymap.set
-
+local is_windows = package.config:sub(1,1) == '\\'
 --Remap space as leader key
 vim.g.mapleader = ';'
 
@@ -93,9 +93,9 @@ keymap('n', '<C-A-f>', '<Esc>:!clang-format -i % <cr>' )
 
 
 -- run config --
-keymap('n', '<leader>rr', '<Esc>:!./run.sh <cr>' )
+keymap('n', '<leader>rr', is_windows and '<Esc>:!run.bat <cr>' or '<Esc>:!./run.sh <cr>' )
 keymap('n', '<leader>rc', '<Esc>:terminal <cr>' )
-keymap('n', '<leader>rd', '<Esc>:!./run.sh -d<cr>' )
+keymap('n', '<leader>rd', is_windows and '<Esc>:!run.bat -d<cr>' or '<Esc>:!./run.sh -d<cr>' )
 
 
 -- nvim-tree-
