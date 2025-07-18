@@ -105,3 +105,20 @@ keymap('n', '<leader>e', '<Esc>:NvimTreeToggle <cr>' )
 keymap('n', 'ss', '<Plug>(easymotion-s2)' )
 -- terminal -- 
 keymap('n', '<leader>t', ':ToggleTerm <cr>' )
+
+
+-- dap config  --
+local dap = require('dap')
+keymap('n', '<leader>dt',  dap.toggle_breakpoint)
+keymap('n', '<leader>dc',  dap.continue)
+keymap('n', '<leader>dr',  dap.repl.open)
+keymap('n', '<leader>dk',  dap.terminate)
+
+keymap('n', '<leader>dso',  dap.step_over)
+keymap('n', '<leader>dsi',  dap.step_into)
+keymap('n', '<leader>dsu',  dap.step_out)
+keymap('n', '<leader>dl',  dap.run_last)
+
+local dapui = require('dapui')
+keymap('n', '<leader>duu',  dapui.open)
+keymap('n', '<leader>duc',  dapui.close)

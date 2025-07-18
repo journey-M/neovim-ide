@@ -26,3 +26,4 @@ require "editor.easymotion"
 
 -- lsp
 require "lsp"
+require "lsp.dap"
