@@ -25,5 +25,5 @@ require "editor.autocommands"
 require "editor.easymotion"
 
 -- lsp
-require "lsp"
+require "lsp.mason"
 require "lsp.dap"
