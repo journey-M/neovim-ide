@@ -1,5 +1,10 @@
 
 
+系统装完成后:
+1.安装nettools dhcpd
+2.安装vim git
+
+
 vscode 配置c++ 环境 
 plugin: CMake  clangd  CodeLLDB
 

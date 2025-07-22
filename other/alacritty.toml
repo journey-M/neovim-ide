@@ -1,6 +1,6 @@
 #设置改变配置自动启动 [window]的需要重启
+[general]
 live_config_reload = true
-
 #改变窗口设置
 [window]
 #窗口大小
@@ -14,7 +14,7 @@ title = "Alacritty"
 
 #字体
 [font]
-size = 13.0
+size = 15.0
 [font.bold]
 family = "monospace"
 style = "Bold"

@@ -83,6 +83,7 @@ keymap('n', '<leader>fc', ':Telescope git_commits<cr>' )
 keymap('n', '<leader>ft', ':Telescope tags<cr>' )
 keymap('n', '<leader>fr', ':Telescope oldfiles <cr>' )
 keymap('n', '<leader>fs', ':Telescope grep_string <cr>' )
+keymap('n', '<leader>fp', ':NvimTreeFindFile<cr>')
 
 -- use clang-format format code --
 keymap('n', '<C-A-f>', '<Esc>:!clang-format -i % <cr>' )
@@ -104,5 +105,4 @@ keymap('n', '<leader>e', '<Esc>:NvimTreeToggle <cr>' )
 keymap('n', 'ss', '<Plug>(easymotion-s2)' )
 -- terminal -- 
 keymap('n', '<leader>t', ':ToggleTerm <cr>' )
-
 
