@@ -93,9 +93,11 @@ dap.configurations.cpp= {
 local keymap = vim.keymap.set
 -- dap config  --
 keymap('n', '<leader>dr',  dap.repl.toggle,{desc='terminate'})
-keymap('n', '<leader>dk',  dap.terminate, {desc='terminate'})
+keymap('n', '<leader>dc',  dap.terminate, {desc='terminate'})
 keymap('n', '<leader>dp',  dap.pause, {desc='pause'})
 keymap('n', '<leader>dl',  dap.run_last, {desc='run last'})
+keymap('n', '<leader>dj',  dap.down, {desc='go pre stack'})
+keymap('n', '<leader>dk',  dap.up, {desc='go next stack'})
 
 keymap('n', '<F5>',  dap.step_over )
 keymap('n', '<F6>',  dap.step_into)
