@@ -1,7 +1,7 @@
 vim.lsp.enable('clangd')
 vim.lsp.config('clangd', {
 })
-
+require("nvim-dap-virtual-text").setup()
 
 require("mason").setup({
     ui = {
@@ -24,7 +24,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
       -- Create a keymap for vim.lsp.buf.implementation ...
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
       --vim.keymap.set('n', 'gk', vim.lsp.buf.formatting, bufopts)
-      --vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
+      vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
       --vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
       
       -- Unmap K
