@@ -1,7 +1,11 @@
 vim.lsp.enable('clangd')
 vim.lsp.config('clangd', {
 })
-require("nvim-dap-virtual-text").setup()
+vim.lsp.enable('gopls')
+local ok, dapvtxt = pcall(require, "nvim-dap-virtual-text")
+if ok then 
+  dapvtxt.setup()
+end
 
 require("mason").setup({
     ui = {
@@ -14,7 +18,14 @@ require("mason").setup({
 
 })
 
-require("mason-lspconfig").setup()
+require("mason-lspconfig").setup{
+    automatic_enable = {
+        exclude = {
+            "gopls",
+            "codelldb"
+        }
+    }
+}
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('my.lsp', {}),

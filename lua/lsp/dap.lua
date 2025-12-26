@@ -1,7 +1,24 @@
-local dap = require('dap')
-require("mason-nvim-dap").setup()
-require('dapui').setup()
-local dapui = require('dapui')
+local ok, dap = pcall(require, "dap")
+if not ok then
+	return
+end
+
+ok, masonDap =  pcall(require, "mason-nvim-dap")
+if ok then 
+  masonDap.setup()
+else
+  print("mason-nvim-dap not found ")
+  return 
+end
+
+ok, dapui = pcall(require, 'dapui')
+if ok then 
+  dapui.setup()
+else 
+  print("dapui not found")
+  return 
+end
+
 --  dapui.setup()
 
 
